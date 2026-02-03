@@ -1,8 +1,11 @@
+
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("=== Simple Calculator ===");
+        System.out.println("Version 1.0");
 
         // Create Scanner
         Scanner scanner = new Scanner(System.in);
@@ -21,6 +24,7 @@ public class Main {
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
+        System.out.println("5. Modulo");
         System.out.print("Enter your choice (1-4): ");
         int choice = scanner.nextInt();
 
@@ -44,7 +48,11 @@ public class Main {
         } else if (choice == 4) {
             result = calc.division(number1, number2);
             System.out.println("Result: " + number1 + " / " + number2 + " = " + result);
-        } else {
+        }
+        else if (choice == 5) {
+            result = calc.modulo(number1, number2);
+            System.out.println("Result: " + number1 + " % " + number2  + " = " +  result);
+        } else{
             System.out.println("Invalid choice!");
         }
 

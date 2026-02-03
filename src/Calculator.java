@@ -17,6 +17,9 @@ public class Calculator {
 
     //methods to be used to  calculate division
     public double division (double num1, double num2) {
+        if(num2==0){
+            System.out.println("cannot divide by zero");
+        }
         return num1 / num2;
     }
 
